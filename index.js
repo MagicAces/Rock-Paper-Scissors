@@ -2,7 +2,11 @@ const choices = ["scissors", "paper", "rock"];
 
 
 var storage = window.localStorage;
-$(".score p").html(storage.getItem('score'));
+
+if (storage.getItem('score') === '')
+    $(".score p").html('0');
+else
+    $(".score p").html(storage.getItem('score'));
 
 $(".rules").click((event) => {
     $(".dialog-back").css("display", "block");
