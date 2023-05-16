@@ -1,0 +1,360 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+html {
+    background-image: radial-gradient(circle 700px at top, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%) 95%);
+    background-repeat: repeat;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    margin: 50px auto;
+    width: 450px;
+    padding: 15px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title {
+    color: hsl(100, 100%, 100%);
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.score {
+    padding: 10px 30px 0;
+    text-align: center;
+    background-color: hsl(100, 100%, 100%);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px hsl(0, 0%, 0%);
+}
+
+.score span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    color: hsl(229, 64%, 46%);
+}
+
+.score p {
+    font-size: 55px;
+    color: hsl(229, 25%, 31%);
+    font-weight: bolder;
+}
+
+.game-1 {
+    margin: 10px auto;
+    width: 650px;
+    position: relative;
+    padding: 20px;
+    background-image: url("images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 170px 78px;
+}
+
+.tier-1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
+}
+
+.tier-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.piece {  
+    background-color: hsl(100, 100%, 100%);
+    padding: 15px 20px;
+    border-radius: 50%;
+    box-shadow: inset 1px 6px 0px 1px hsla(0, 0%, 80%, 0.7);
+}
+
+.piece:hover {
+    cursor: pointer;
+}
+
+.piece-border {
+    padding: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: inset -1px -6px 0px 1px hsla(0, 0%, 0%, 0.2);
+}
+
+.paper {
+    background-image: linear-gradient(135deg, hsl(230, 89%, 62%) 40%, hsl(230, 89%, 65%) 60%);
+}
+
+.scissors {
+    background-image: linear-gradient(135deg, hsl(39, 89%, 49%) 40%, hsl(40, 84%, 53%) 60%);
+}
+
+.rock {
+    background-image: linear-gradient(135deg, hsl(349, 71%, 52%) 40%, hsl(349, 70%, 56%) 60%);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    bottom: 0px;
+}
+
+button.rules {
+    position: absolute;
+    right: 30px;
+    height: 30px;
+    padding: 5px 35px;
+    background-color: hsl(237, 49%, 15%);
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 7px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 9;
+}
+
+button.rules:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+dialog {
+    padding: 30px 25px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    top: 150px;
+    z-index: 15;
+}
+
+.dialog-back {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    display: none;
+}
+
+dialog .heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+dialog img {
+    cursor: pointer;
+}
+
+.heading p {
+    text-transform: uppercase;
+    color: hsl(229, 25%, 31%);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.game-2 {
+    margin: 10px auto;
+    width: 650px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: hsl(100, 100%, 100%);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    flex-direction: row;
+    display: none;
+}
+
+.you {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.house {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.message {
+    text-align: center;
+    display: none;
+    align-self: center;
+}
+
+.message button {
+    padding: 7px 30px;
+    margin-top: 20px;
+    border: 1px inset hsla(0, 0%, 80%, 0.7);
+    border-radius: 8px;
+    letter-spacing: 1px;
+    color: hsl(229, 25%, 31%);
+    font-size: 10px;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.message button:hover {
+    color: hsl(349, 71%, 52%);
+}
+
+.celeb-2 {
+    padding: 30px;
+    background-color: hsla(0, 0%, 80%, 0.1);
+    border-radius: 50%;
+}
+
+.celeb-1 {
+    padding: 30px;
+    background-color: hsla(0, 0%, 70%, 0.1);
+    border-radius: 50%;
+}
+
+.change-color {
+    background-color: inherit;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(max-width: 400px) {
+    .header {
+        width: 290px;
+
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .score {
+        padding: 10px 25px 0;
+    }
+
+    .score p {
+        font-size: 40px;
+    }
+
+    .game-1 {
+        width: 340px;
+        background-position: 65px 65px;
+        background-size: 200px;
+        padding: 10px 0;
+    }
+
+    .tier-1 {
+        margin-bottom: 50px;
+        justify-content: space-around;
+    }
+
+    .piece {
+        padding: 7px 12px;
+    }
+
+    .piece img {
+        transform: scale(0.7);
+    }
+
+    .piece-border {
+        padding: 15px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        height: fit-content;
+    }
+
+    button.rules {
+        margin: 0 auto 10px;
+        position: initial;
+        display: block;
+    }
+
+    .game-2 {
+        width: 340px;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+
+    .you {
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+
+    .message {
+        margin-top: 40px;
+        order: 2;
+    }
+
+    .house {
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+
+    .celeb-1 {
+        padding: 15px;
+    }
+
+    .celeb-2 {
+        padding: 15px;
+    }
+
+    dialog#mobile {
+        padding: 90px 25px;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #mobile  p {
+        text-transform: uppercase;
+        color: hsl(229, 25%, 31%);
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    #mobile img[alt="Close"] {
+        order: 4;
+        width: fit-content;
+    }
+}
+
