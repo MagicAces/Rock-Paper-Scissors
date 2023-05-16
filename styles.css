@@ -145,6 +145,10 @@ dialog {
     z-index: 15;
 }
 
+dialog#mobile {
+    display: none;
+}
+
 .dialog-back {
     width: 100vw;
     height: 100vh;
@@ -331,6 +335,10 @@ dialog img {
 
     .celeb-2 {
         padding: 15px;
+    }
+
+    dialog#desktop {
+        display: none;
     }
 
     dialog#mobile {
