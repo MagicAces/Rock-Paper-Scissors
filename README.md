@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/MagicAces/Rock-Paper-Scissors)
-- Live Site URL: [Github Pages](https://your-live-site-url.com)
+- Solution URL: [https://github.com/MagicAces/Rock-Paper-Scissors](https://github.com/MagicAces/Rock-Paper-Scissors)
+- Live Site URL: [https://magicaces.github.io/Rock-Paper-Scissors/](https://magicaces.github.io/Rock-Paper-Scissors/)
 
 ## My process
 
